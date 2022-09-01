@@ -50,7 +50,7 @@ class Person {
     this.stomach = [];
   }
   eat(edible) {
-    if(this.stomach < 10) {
+    if(this.stomach.length < 10) {
       this.stomach.push(edible);
     }
   }
@@ -116,7 +116,14 @@ class Car {
 */
 
 class Lambdasian {
-  
+  constructor({name, age, location}) {
+    this.name = name;
+    this.age = age;
+    this.location = location;
+  }
+  speak() {
+    return `Hello my name is ${this.name}, and I am from ${this.location}`;
+  }
 }
 
 /*
